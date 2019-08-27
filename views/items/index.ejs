@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hunter</title>
+    <!-- Google Icon Fonts used by Materialize -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Materialize CSS Framework -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <!-- JavaScript for Materialize -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+
+<body>
+    <div class="nav-wrapper">
+        <a href="" class="brand-logo left">Item Descriptions</a>
+        <nav>
+            <ul class="center">
+                <li>
+                    <% if (user) { %>
+                    <a href="/logout"><i class="material-icons left"></i>Log Out</a>
+                    <% } else { %>
+                    <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
+                    <% } %>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <div id="allItems">
+        <% if(items.length ==0){ %>
+        <h1>THERE ARE NO ITEMS</h1>
+
+        <% } else { %>
+        <% items.forEach(i => { %>
+        <div id="list">
+            <ul>
+                <a href="/items/<%= i._id %>/edit">edit item</a>
+                <li><%= i.title %></li>
+                <img id="img" src="<%= i.image %>">
+                <li id="description">Description:<%= i.description %></li>
+                <li id="price">Price: <%= i.price %></li>
+                <li id="seller">Seller: <%= i.seller %></li>
+
+            </ul>
+        </div>
+        <% }) %>
+        <% } %>
+    </div>
+</body>
+
+</html>
