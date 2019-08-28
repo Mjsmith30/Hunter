@@ -10,7 +10,16 @@ var itemSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: "Hunter"
     
-    } 
+    },
+    comments:[{
+        type: {
+            type: Schema.Types.ObjectId,
+            ref:"Comment"
+        }
+    }
+
+    ]
+    
 }, {
     timestamps: true
 });

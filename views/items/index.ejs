@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <h1 id = "title">Hunter x Hunting</h1>
+    <h1 id = "title">THRIFT SHOP X HUNTER</h1>
     <div class="nav-wrapper">
         <a href="" class="brand-logo left">Item Descriptions</a>
         <nav>
@@ -39,16 +39,23 @@
         <div id="list">
             <ul>
                 
+                
                 <li id = "itemTitle"><%= i.title %></li>
                 <img id="img" src="<%= i.image %>">
                 <li id="description">Description:<%= i.description %></li>
                 <li id="price">Price: <%= i.price %></li>
                 <% if( i.seller) { %>
                     <li id="seller">Seller: <%= i.seller.name %>,  <%= i.seller.email %></li>
+                    <% if(user){%>
+                        <% if (user._id.equals(i.seller._id)) { %>
+                            <a href="/items/<%= i._id %>/edit">edit item</a>
+                        <% } else { %>
+
+                        <% } %>
+                    <% } %>
                 <% } else { %>
                     <li>No Seller Info</li>
                 <% } %>
-                <a href="/items/<%= i._id %>/edit">edit item</a>
             </ul>
         </div>
         <% }) %>

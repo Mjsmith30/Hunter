@@ -10,4 +10,5 @@ router.post('/', itemController.create)
 // router.get('/:id', itemController.show)
 router.get('/:id/edit', itemController.edit)
 router.post('/:id/edit', itemController.update)
+router.delete('/:id', itemController.delete)
 module.exports = router;

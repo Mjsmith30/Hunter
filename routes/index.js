@@ -19,7 +19,7 @@ router.get("/hunters", function(req, res) {
   
 })
 router.get('/', function(req, res) {
-  res.redirect('/Hunter');
+  res.redirect('/items');
 });
 
 

@@ -14,13 +14,15 @@
   }
 
   a {
-  color: #00B7FF;
+  color:blue;
+  font-size: 12px;
  
   
   }
   nav ul a {
       padding: 0 0 0 1100px;
-      color: #00B7FF;
+      color: blue;
+    }
      
 
 } 
@@ -88,7 +90,9 @@ material-icons{
   float: left !important;
   font-size: x-large;
   text-decoration: underline;
-} 
+  font-size: -webkit-xxx-large;
+}
+
 
 
 .center {

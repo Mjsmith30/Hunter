@@ -10,7 +10,6 @@ module.exports = {
 };
 
 function update(req, res){
-  console.log("Hitting Update REquest!!!")
   User.findByIdAndUpdate(req.params.id, req.body, 
     {new: true}, function(err, user){
       console.log(user)
@@ -20,7 +19,6 @@ function update(req, res){
 }
 
 function show(req, res){
-  console.log("HELLOO")
   Hunter.findById(req.params.id, function(e, user){
     res.render('hunter/show', {
       user

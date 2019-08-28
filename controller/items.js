@@ -7,20 +7,20 @@ module.exports = {
   // show,
   edit,
   update,
- delete: deleteOne,
+  delete: deleteItem,
 
 };
 
-function update(req, res){
-  Item.findByIdAndUpdate(req.params.id, req.body, 
-    {new: true}, function(err, item){
-    if(err) res.redirect('back')
-    return res.redirect('/items')
-  })
+function update(req, res) {
+  Item.findByIdAndUpdate(req.params.id, req.body,
+    { new: true }, function (err, item) {
+      if (err) res.redirect('back')
+      return res.redirect('/items')
+    })
 }
 
-function edit(req, res){
-  Item.findById(req.params.id, function(e, item){
+function edit(req, res) {
+  Item.findById(req.params.id, function (e, item) {
     res.render('items/edit', {
       item: item,
       user: req.user
@@ -29,58 +29,47 @@ function edit(req, res){
 }
 
 function index(req, res) {
-  Item.find({}).populate('seller').exec(function(err, items){
+  Item.find({}).populate('seller').exec(function (err, items) {
     console.log(items)
     res.render('items/index', {
       user: req.user,
       items: items
     })
   })
-  // Item.find({})
-  // .populate('seller')
-  // .then(function (e, items) {
-  //   console.log(items)
-  //   res.render('items/index', {
-  //     user: req.user,
-  //     items: items
 
-  //   })
-
-  // })
 }
 
-function newItem(req,res){
-  res.render('items/new', { user: req.user})
+function newItem(req, res) {
+  res.render('items/new', { user: req.user })
 }
 
-function create(req, res){
+function create(req, res) {
   req.body.seller = req.user
   var newItem = new Item(req.body)
   console.log(newItem)
 
-  
 
-  newItem.save(function(err){
-    if(err) res.redirect("/items/new")
+
+  newItem.save(function (err) {
+    if (err) res.redirect("/items/new")
     res.redirect('/items')
   })
 
 }
-// function show(req, res){
-//   hunter.findById(req.params.id,
-//     function(err,hunted){
-//     res.render("/show",
-//     hunted
-//     )}
-//   )}
 
-  function deleteOne(req, res){
-    Item.findByIdAndUpdate(req.params.id, req.body, 
-      {new: true}, function(err, item){
-      if(err) res.redirect('back')
-      return res.redirect('/items')
-      }
-    )}
-    function deleteOne(id) {
-      item.splice(id, 1);
-    }
+
+function deleteItem(req, res) {
+  // item.deleteOne(req.params.id)
+  // req.user.item.push(req.body);
+  // req.user.save(function (err) {
+  //   res.redirect('/items');
+  // });
+  Item.findByIdAndDelete(req.params.id, function(er, item){
+    if(er) res.redirect('back')
+    res.redirect('/items')
+  })
+}
+
+
+
+
