@@ -29,14 +29,24 @@ function edit(req, res){
 }
 
 function index(req, res) {
-  Item.find({}, function (e, items) {
+  Item.find({}).populate('seller').exec(function(err, items){
+    console.log(items)
     res.render('items/index', {
       user: req.user,
       items: items
-
     })
-
   })
+  // Item.find({})
+  // .populate('seller')
+  // .then(function (e, items) {
+  //   console.log(items)
+  //   res.render('items/index', {
+  //     user: req.user,
+  //     items: items
+
+  //   })
+
+  // })
 }
 
 function newItem(req,res){

@@ -10,7 +10,8 @@ var hunterSchema = new Schema({
       ref: "Item"
     }],
     avatar: String,
-    googleId: String
+    googleId: String,
+    contactInfo: String,
   }, {
     timestamps: true
   });

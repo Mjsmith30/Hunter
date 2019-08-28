@@ -15,46 +15,88 @@
 
   a {
   color: #00B7FF;
+ 
   
   }
-  /* nav ul a {
-    -webkit-transition: background-color .3s;
-    transition: background-color .3s;
-    font-size: 1rem;
-    color: #fff;
-    display: block;
-    padding: 0 0 0 1100px;
-    cursor: pointer;
-} */
+  nav ul a {
+      padding: 0 0 0 1100px;
+      color: #00B7FF;
+     
+
+} 
+element.style {
+  text-shadow: coral;
+  font-size: 50px;
+}
 
   #img {
     border-style: none;
     width: 300px;
-    height: 400px;
+    height: 260px;
     
   }
 
   #price {
     text-decoration: underline;
     text-decoration-color: red;
-    width: 104px;
+    
+    background-color: aliceblue;
+    width: 300px;
   }
 
   #seller {
-    text-decoration: underline;
+    background-color: aliceblue;
    
-    width: 104px;
+    width: 300px;
   }
 
   #description{
     text-decoration-style: wavy;
+    background-color: aliceblue;
 
   
-    width: 104px;
+    width: 300px;
   }
   ul{
-    
+    background-color: cornsilk;
     padding-left: 200px;
     list-style-type: none;
     padding-bottom: 200px;
+   
+}
+/* .nav-wrapper {
+  display: flex;
+
+} */
+material-icons{
+  justify-content: right;
+}
+#title{
+  font-stretch: semi-expanded;
+  font-weight: bold;
+  font-family: fantasy;
+  text-align: center;
+  box-shadow: -5px 5px 3px 0 rgba(41, 41, 41, 0.75); 
+  
+  
+}
+#placeholder{
+  text-decoration-color: black;
+
+}
+.left {
+  float: left !important;
+  font-size: x-large;
+  text-decoration: underline;
+} 
+
+
+.center {
+  background-color: aliceblue;
+}
+
+#itemTitle{
+  font-size: 30px;
+  font-style: oblique;
+  text-decoration: underline;
 }

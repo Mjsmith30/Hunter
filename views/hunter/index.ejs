@@ -22,14 +22,18 @@
           <% if (user) { %>
               <a href="/logout"><i class="material-icons left"></i>Log Out</a>
           <% } else { %>
-              <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
-          <% } %>
+            <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
+            <% } %>
           </li>
         </ul>
       </div>
     </nav>
   </div>
   <div class="container">
+      <% if (user) { %>
+    <a href="/hunter/<%= user._id%>">Visit Profile Page</a>
+    <% } else { %>
+      <% } %>
     <div id="search-row" class="row">
       <h2 class="col s4 blue-grey-text text-darken-2">Hunters</h2>
       <form action="/hunter" method="GET">

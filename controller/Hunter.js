@@ -2,10 +2,31 @@ const Hunter = require('../model/Hunter');
 
 module.exports = {
   index,
+  show,
+  update
   // addFact,
   // delFact,
   
 };
+
+function update(req, res){
+  console.log("Hitting Update REquest!!!")
+  User.findByIdAndUpdate(req.params.id, req.body, 
+    {new: true}, function(err, user){
+      console.log(user)
+    if(err) res.redirect('back')
+    return res.redirect(`/hunter/${req.params.id}`)
+  })
+}
+
+function show(req, res){
+  console.log("HELLOO")
+  Hunter.findById(req.params.id, function(e, user){
+    res.render('hunter/show', {
+      user
+    })
+  })
+}
 
 function index(req, res, next) {
   console.log(req.query)

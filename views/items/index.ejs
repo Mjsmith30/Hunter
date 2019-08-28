@@ -13,13 +13,14 @@
 </head>
 
 <body>
+    <h1 id = "title">Hunter x Hunting</h1>
     <div class="nav-wrapper">
         <a href="" class="brand-logo left">Item Descriptions</a>
         <nav>
             <ul class="center">
                 <li>
                     <% if (user) { %>
-                    <a href="/logout"><i class="material-icons left"></i>Log Out</a>
+                    <a href="/logout"><i class="material-icons left">vpn_key</i>Log Out</a>
                     <% } else { %>
                     <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
                     <% } %>
@@ -37,13 +38,17 @@
         <% items.forEach(i => { %>
         <div id="list">
             <ul>
-                <a href="/items/<%= i._id %>/edit">edit item</a>
-                <li><%= i.title %></li>
+                
+                <li id = "itemTitle"><%= i.title %></li>
                 <img id="img" src="<%= i.image %>">
                 <li id="description">Description:<%= i.description %></li>
                 <li id="price">Price: <%= i.price %></li>
-                <li id="seller">Seller: <%= i.seller %></li>
-
+                <% if( i.seller) { %>
+                    <li id="seller">Seller: <%= i.seller.name %>,  <%= i.seller.email %></li>
+                <% } else { %>
+                    <li>No Seller Info</li>
+                <% } %>
+                <a href="/items/<%= i._id %>/edit">edit item</a>
             </ul>
         </div>
         <% }) %>

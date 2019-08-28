@@ -9,6 +9,7 @@ var itemSchema = new Schema({
     seller:{
         type: Schema.Types.ObjectId,
         ref: "Hunter"
+    
     } 
 }, {
     timestamps: true
