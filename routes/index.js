@@ -37,8 +37,8 @@ router.get('/auth/google', passport.authenticate(
 router.get('/oauth2callback', passport.authenticate(
   'google',
   {
-    successRedirect: '/Hunter',
-    failureRedirect: '/Hunter'
+    successRedirect: '/hunter',
+    failureRedirect: '/hunter'
   }
 ));
 
