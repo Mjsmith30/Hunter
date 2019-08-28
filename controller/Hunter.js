@@ -37,7 +37,7 @@ function index(req, res, next) {
   .sort(sortKey).exec(function(err, hunters) {
     if (err) return next(err);
     // Passing search values, name & sortKey, for use in the EJS
-    res.render('Hunter/index', {
+    res.render('hunter/index', {
       hunters,
       user: req.user,
       name: req.query.name,
