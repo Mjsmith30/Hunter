@@ -15,7 +15,7 @@
 <body>
     <h1 id = "title">THRIFT SHOP X HUNTER</h1>
     <div class="nav-wrapper">
-        <a href="" class="brand-logo left">Item Descriptions</a>
+        <a href="" class="brand-logo right">Hunter Profile</a>
         <nav>
             <ul class="center">
                 <li>
@@ -38,7 +38,7 @@
         <% items.forEach(i => { %>
         <div id="list">
             <ul>
-                
+                    
                 
                 <li id = "itemTitle"><%= i.title %></li>
                 <img id="img" src="<%= i.image %>">
@@ -61,6 +61,7 @@
         <% }) %>
         <% } %>
     </div>
+    
 </body>
 
 </html>

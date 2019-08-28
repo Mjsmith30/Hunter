@@ -10,10 +10,10 @@ passport.use(new GoogleStrategy(
   },
   function(accessToken, refreshToken, profile, cb) {
     // A user has logged in with OAuth
-    Hunter.findOne({googleId: profile.id}, function(err, Hunter) {
+    Hunter.findOne({googleId: profile.id}, function(err, hunter) {
       if(err) return cb(err);
-      if (Hunter) {
-        return cb(null, Hunter);
+      if (hunter) {
+        return cb(null, hunter);
       } else {
         // We have a first-time user via OAuth!
         var newHunter = new Hunter({
@@ -30,12 +30,12 @@ passport.use(new GoogleStrategy(
   }
 ));
 
-passport.serializeUser(function(Hunter, done) {
-  done(null, Hunter.id);
+passport.serializeUser(function(hunter, done) {
+  done(null, hunter.id);
 });
 
 passport.deserializeUser(function(id, done) {
-  Hunter.findById(id, function(err, Hunter) {
-    done(err, Hunter);
+  Hunter.findById(id, function(err, hunter) {
+    done(err, hunter);
   });
 });

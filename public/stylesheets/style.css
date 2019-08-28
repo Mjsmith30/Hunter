@@ -1,6 +1,6 @@
-#allItems {
-    display: inline-grid;
-    grid-template-columns: 500px 500px 500px;
+  #allItems {
+  display: inline-grid;
+  grid-template-columns: 500px 500px 500px;
   padding: 50px;
   font: 24px "Lucida Grande", Helvetica, Arial, sans-serif;
   /* padding: 150px, 150px, 150px, 150px; */
@@ -15,21 +15,21 @@
 
   a {
   color:blue;
-  font-size: 12px;
+ 
  
   
   }
   nav ul a {
-      padding: 0 0 0 1100px;
-      color: blue;
-    }
+   padding: 0 0 0 1100px;
+  color: blue;
+  }
      
 
-} 
-element.style {
+
+  element.style {
   text-shadow: coral;
   font-size: 50px;
-}
+  }
 
   #img {
     border-style: none;
@@ -52,28 +52,22 @@ element.style {
     width: 300px;
   }
 
-  #description{
+  #description {
     text-decoration-style: wavy;
     background-color: aliceblue;
 
   
     width: 300px;
   }
-  ul{
-   
+  ul { 
     padding-left: 200px;
     list-style-type: none;
     padding-bottom: 200px;
    
-}
-/* .nav-wrapper {
-  display: flex;
+  }
 
-} */
-material-icons{
-  justify-content: right;
-}
-#title{
+ 
+  #title {
   font-stretch: semi-expanded;
   font-weight: bold;
   font-family: fantasy;
@@ -81,26 +75,30 @@ material-icons{
   box-shadow: -5px 5px 3px 0 rgba(41, 41, 41, 0.75); 
   
   
-}
-#placeholder{
+  }
+  
+  #placeholder {
   text-decoration-color: black;
 
-}
-.left {
+  }
+  
+  .left {
   float: left !important;
-  font-size: x-large;
-  text-decoration: underline;
+  
   font-size: -webkit-xxx-large;
-}
+  }
+  .left:hover {
+    color:cornflowerblue;
+  }
 
 
 
-.center {
+  .center {
   background-color: aliceblue;
-}
+  }
 
-#itemTitle{
+  #itemTitle {
   font-size: 30px;
   font-style: oblique;
   text-decoration: underline;
-}
+  }
