@@ -1,33 +1,4 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>Hunter</title>
-    <!-- Google Icon Fonts used by Materialize -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Materialize CSS Framework -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="stylesheets/style.css" />
-    <!-- JavaScript for Materialize -->
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-</head>
-
-<body>
-    <h1 id = "title">THRIFT SHOP X HUNTER</h1>
-    <div class="nav-wrapper">
-        <a href="" class="brand-logo right">Hunter Profile</a>
-        <nav>
-            <ul class="center">
-                <li>
-                    <% if (user) { %>
-                    <a href="/logout"><i class="material-icons left">vpn_key</i>Log Out</a>
-                    <% } else { %>
-                    <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
-                    <% } %>
-                </li>
-            </ul>
-        </nav>
-    </div>
+<%- include("../partials/header")%>
 
 
     <div id="allItems">
@@ -61,7 +32,5 @@
         <% }) %>
         <% } %>
     </div>
-    
-</body>
 
-</html>
+<%- include("../partials/footer")%>

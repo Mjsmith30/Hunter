@@ -1,19 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <h1>THRIFT SHOP X HUNTER</h1>
+<%- include("../partials/header")%>
     <h4>PROFILE PAGE</h4>
     <h1><%= user.name %></h1>
+    <h2><%= user.email %></h2>
     <form action="/hunter/<% user._id %>" method="POST">
         <input type="text" name="contactInfo" value="<%=user.contactInfo %>">
         <input type="submit" value="Submit">
-        <a href="/hunter/" class ="brand-logo right">Item Descriptions</a>
+        <a href="/items/" class ="brand-logo right">Items For Sale</a>
     </form>
-</body>
-</html>
+<%- include("../partials/footer")%>

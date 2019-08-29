@@ -1,6 +1,82 @@
-  #allItems {
+#profile{
+  text-align: left;
+  color: blue;
+}
+#profile:hover{
+  color: cornflowerblue;
+}
+body {
+  display: grid;
+}
+.row .col.s4 {
+  width: 33.33%;
+  margin-left: auto;
+  left: auto;
+  right: auto;
+}
+.card .card-content {
+  padding: 10px;
+  border-radius: 2px 2px ;
+  background-color: aliceblue;
+  border-block-end-width: 0px;
+
+
+}
+nav {
+  text-decoration-color: black;
+  background-color:aliceblue;
+  width: 100%;
+  height: 56px;
+  line-height: 56px;
+}
+nav .brand-logo {
+  position: relative;
+  color:black;
+  display: inline-block;
+  font-size: 2.1rem;
+  padding: 0;
+}
+.log-link {
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+  
+  color:blue;
+  display: block;
+  padding: 0 15px;
+  cursor: pointer;
+  font-family: fantasy;
+  font-size: 20px;
+}
+
+nav a:hover{
+  color: cornflowerblue;
+}
+.row .col.s4 {
+  width: -webkit-fill-available;
+  margin-left: auto;
+  left: auto;
+  right: auto;
+}
+.card .card-content .card-title {
+  display: block;
+  line-height: 32px;
+  margin-bottom: 8px;
+ 
+}
+.row .col {
+  text-align: -webkit-center;
+}
+h2 {
+  font-size: 10.56rem;
+  line-height: 110%;
+  margin: 2.3733333333rem 0 1.424rem 0;
+  font-family: fantasy;
+}
+
+
+#allItems {
   display: inline-grid;
-  grid-template-columns: 500px 500px 500px;
+  grid-template-columns: 1fr 1fr 1fr;
   padding: 50px;
   font: 24px "Lucida Grande", Helvetica, Arial, sans-serif;
   /* padding: 150px, 150px, 150px, 150px; */
@@ -11,94 +87,141 @@
   font-variant: all-small-caps;
   background-color: whitesmoke;
   justify-content: center;
-  }
+}
 
-  a {
-  color:blue;
- 
- 
-  
-  }
-  nav ul a {
-   padding: 0 0 0 1100px;
+a {
+color:blue;
+
+
+
+}
+nav ul a {
+
   color: blue;
-  }
-     
-
-
-  element.style {
-  text-shadow: coral;
-  font-size: 50px;
-  }
-
-  #img {
-    border-style: none;
-    width: 300px;
-    height: 260px;
+}
     
-  }
 
-  #price {
-    text-decoration: underline;
-    text-decoration-color: red;
-    
-    background-color: aliceblue;
-    width: 300px;
-  }
 
-  #seller {
-    background-color: aliceblue;
-   
-    width: 300px;
-  }
+element.style {
+text-shadow: coral;
+font-size: 50px;
+}
 
-  #description {
-    text-decoration-style: wavy;
-    background-color: aliceblue;
+#img {
+  border-style: none;
+  width: 300px;
+  height: 260px;
+  
+}
 
+#price {
+  text-decoration: underline;
+  text-decoration-color: red;
   
-    width: 300px;
-  }
-  ul { 
-    padding-left: 200px;
-    list-style-type: none;
-    padding-bottom: 200px;
-   
-  }
+  background-color: aliceblue;
+  width: 300px;
+}
 
- 
-  #title {
-  font-stretch: semi-expanded;
-  font-weight: bold;
-  font-family: fantasy;
-  text-align: center;
-  box-shadow: -5px 5px 3px 0 rgba(41, 41, 41, 0.75); 
+#seller {
+  background-color: aliceblue;
   
-  
-  }
-  
-  #placeholder {
-  text-decoration-color: black;
+  width: 300px;
+}
 
-  }
-  
-  .left {
-  float: left !important;
-  
+#description {
+  text-decoration-style: wavy;
+  background-color: aliceblue;
+
+
+  width: 300px;
+}
+
+
+
+#title {
+font-stretch: semi-expanded;
+font-weight: bold;
+font-family: fantasy;
+text-align: center;
+box-shadow: -5px 5px 3px 0 rgba(41, 41, 41, 0.75); 
+
+
+}
+
+#placeholder {
+text-decoration-color: black;
+
+}
+
+.left {
+float: left !important;
+
+font-size: -webkit-xxx-large;
+}
+.left:hover {
+  color:cornflowerblue;
+}
+
+
+
+.center {
+background-color: aqua;
+}
+
+#itemTitle {
+font-size: 30px;
+font-style: oblique;
+text-decoration: underline;
+}
+
+#logo{
+  color: black;
   font-size: -webkit-xxx-large;
-  }
-  .left:hover {
-    color:cornflowerblue;
+  font-family: fantasy;
+  text-decoration: none;
+  
   }
 
-
+  #logo:hover{
+      color: cornflowerblue;
+  }
 
   .center {
-  background-color: aliceblue;
+    display: flex;
+    justify-content: space-between;
   }
+.nav-log-logo {
+  display: flex;
+}
+nav .brand-logo.right {
+  right: 0.5rem;
+  padding: 0;
+  color: blue;
+  font-family: fantasy;
+  font-size: 20px;
+}
+nav .brand-logo.right:hover{
+  color: cornflowerblue;
 
-  #itemTitle {
-  font-size: 30px;
-  font-style: oblique;
-  text-decoration: underline;
-  }
+}
+h1 {
+  font-size: 25px;
+  line-height: 110%;
+  margin: 2.8rem 0 1.68rem 0;
+  text-decoration: darkslateblue;
+  font-family: fantasy;
+}
+h4 {
+  font-size: 2.28rem;
+  line-height: 110%;
+  margin: 1.52rem 0 .912rem 0;
+  text-align: center;    
+  box-shadow: -2px 12px 10px 0 rgba(41, 41, 41, 0.75);
+  font-family: fantasy;
+}
+h2 {
+  font-size: 1.28rem;
+  line-height: 110%;
+  margin: 2.3733333333rem 0 1.424rem 0;
+  font-family: fantasy;
+}
