@@ -1,36 +1,34 @@
-<%- include("../partials/header")%>
+    <%- include("../partials/header")%>
 
 
-    <div id="allItems">
-        <% if(items.length ==0){ %>
-        <h1>THERE ARE NO ITEMS</h1>
+        <div id="allItems">
+            <% if(items.length ==0){ %>
+            <h1>THERE ARE NO ITEMS</h1>
 
-        <% } else { %>
-        <% items.forEach(i => { %>
-        <div id="list">
-            <ul>
-                    
-                
-                <li id = "itemTitle"><%= i.title %></li>
-                <img id="img" src="<%= i.image %>">
-                <li id="description">Description:<%= i.description %></li>
-                <li id="price">Price: <%= i.price %></li>
-                <% if( i.seller) { %>
-                    <li id="seller">Seller: <%= i.seller.name %>,  <%= i.seller.email %></li>
-                    <% if(user){%>
-                        <% if (user._id.equals(i.seller._id)) { %>
-                            <a href="/items/<%= i._id %>/edit">edit item</a>
-                        <% } else { %>
+            <% } else { %>
+            <% items.forEach(i => { %>
+            <div id="list">
+                <ul>                
+                    <li id = "itemTitle"><%= i.title %></li>
+                    <img id="img" src="<%= i.image %>">
+                    <li id="description">Description:<%= i.description %></li>
+                    <li id="price">Price: <%= i.price %></li>
+                    <% if( i.seller) { %>
+                        <li id="seller">Seller: <%= i.seller.name %>,  <%= i.seller.email %></li>
+                        <% if(user){%>
+                            <% if (user._id.equals(i.seller._id)) { %>
+                                <a href="/items/<%= i._id %>/edit">edit item</a>
+                            <% } else { %>
 
+                            <% } %>
                         <% } %>
+                    <% } else { %>
+                        <li>No Seller Info</li>
                     <% } %>
-                <% } else { %>
-                    <li>No Seller Info</li>
-                <% } %>
-            </ul>
+                </ul>
+            </div>
+            <% }) %>
+            <% } %>
         </div>
-        <% }) %>
-        <% } %>
-    </div>
 
-<%- include("../partials/footer")%>
+    <%- include("../partials/footer")%>

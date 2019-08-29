@@ -10,7 +10,6 @@ commentSchema = new Schema({
     item: {
         type:Schema.Types.ObjectId,
         ref:"Item",
-        
     }
 
 
