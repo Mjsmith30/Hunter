@@ -1,4 +1,14 @@
-@media only screen and (min-width: 768px){
+    @media only screen and (min-width: 580px){
+      #logo {
+        color: black;
+        font-family: fantasy;
+        text-decoration: none;
+        text-decoration: underline;
+        font-size: 30px;
+        padding-left: 20px;
+        text-decoration: underline;
+      }
+    }
     
     #profile{
       text-align: left;
@@ -274,4 +284,4 @@
         padding-right: 100px;
         text-align: center;
       }
-    }
+    
