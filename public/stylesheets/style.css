@@ -1,3 +1,5 @@
+@media only screen and (min-width: 768px){
+    
     #profile{
       text-align: left;
       color: blue;
@@ -272,3 +274,4 @@
         padding-right: 100px;
         text-align: center;
       }
+    }
