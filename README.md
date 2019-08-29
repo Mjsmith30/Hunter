@@ -7,7 +7,7 @@
 
 ## Screenshot
 
-![ThriftxHunter](Image 8-29-19 at 2.02 PM.jpg)
+![thriftxhunter](https://i.imgur.com/qJ3nHsK.jpg)
 
 ## Technologies Used
 - JAVASCRIPT
