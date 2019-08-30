@@ -6,11 +6,11 @@
             <input class='edit-input' type="text" name="description" value="<%= item.description %>" placeholder="description">
             <input class='edit-input' type="text" name="price" value="<%= item.price %>" placeholder="price" placeholder="paste in image url">
             <input class='edit-input' type="text" name="image" value="<%= item.image %>" placeholder=" paste in Image URL">
-        
+            <input id = "submit" type="submit" value='SUBMIT'>
         </form>
         
         <form action="/items/<%= item._id %>?_method=DELETE" method="POST">
-            <input id = "submit" type="submit" value='SUBMIT'>
+          
             <input id = "delete" type="submit" value="  DELETE YOUR ITEM">
         </form>
 
